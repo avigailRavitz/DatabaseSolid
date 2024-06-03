@@ -8,7 +8,8 @@
         public double Heigh { get; set; }
         public string Seminary { get; set; }
         public string Sector { get; set; }
-        public bool IsGiveApartment { get; set; }
+        public bool IfGiveFlat { get; set; }
+        public List<Proposal> Proposals { get; set; }
 
     }
 }

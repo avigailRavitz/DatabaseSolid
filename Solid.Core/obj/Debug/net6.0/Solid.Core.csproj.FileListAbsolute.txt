@@ -22,15 +22,16 @@ Y:\Groups\Group_3\פרוידיגר  חנה\NET.core\Solid\Solid.Core\obj\Debug\n
 Y:\Groups\Group_3\פרוידיגר  חנה\NET.core\Solid\Solid.Core\obj\Debug\net6.0\refint\Solid.Core.dll
 Y:\Groups\Group_3\פרוידיגר  חנה\NET.core\Solid\Solid.Core\obj\Debug\net6.0\Solid.Core.pdb
 Y:\Groups\Group_3\פרוידיגר  חנה\NET.core\Solid\Solid.Core\obj\Debug\net6.0\ref\Solid.Core.dll
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\bin\Debug\net6.0\Solid.Core.deps.json
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\bin\Debug\net6.0\Solid.Core.dll
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\bin\Debug\net6.0\Solid.Core.pdb
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\obj\Debug\net6.0\Solid.Core.csproj.AssemblyReference.cache
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\obj\Debug\net6.0\Solid.Core.GeneratedMSBuildEditorConfig.editorconfig
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\obj\Debug\net6.0\Solid.Core.AssemblyInfoInputs.cache
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\obj\Debug\net6.0\Solid.Core.AssemblyInfo.cs
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\obj\Debug\net6.0\Solid.Core.csproj.CoreCompileInputs.cache
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\obj\Debug\net6.0\Solid.Core.dll
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\obj\Debug\net6.0\refint\Solid.Core.dll
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\obj\Debug\net6.0\Solid.Core.pdb
-Y:\Groups\Group_3\רביץ  אביגיל\new sold\Solid\Solid.Core\obj\Debug\net6.0\ref\Solid.Core.dll
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\bin\Debug\net6.0\Solid.Core.deps.json
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\bin\Debug\net6.0\Solid.Core.dll
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\bin\Debug\net6.0\Solid.Core.pdb
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\obj\Debug\net6.0\Solid.Core.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\obj\Debug\net6.0\Solid.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\obj\Debug\net6.0\Solid.Core.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\obj\Debug\net6.0\Solid.Core.AssemblyInfo.cs
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\obj\Debug\net6.0\Solid.Core.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\obj\Debug\net6.0\Solid.Core.sourcelink.json
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\obj\Debug\net6.0\Solid.Core.dll
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\obj\Debug\net6.0\refint\Solid.Core.dll
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\obj\Debug\net6.0\Solid.Core.pdb
+C:\Users\USER\Desktop\‏‏תיקיה חדשה (4)\ShidoochimProject-Net.core-\Solid.Core\obj\Debug\net6.0\ref\Solid.Core.dll

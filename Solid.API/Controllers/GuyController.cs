@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Solid.API.Models;
+using Solid.Core.DTOs;
 using Solid.Core.Models;
 using Solid.Core.Services;
 using System.Xml.Linq;
@@ -13,50 +16,60 @@ namespace ProjectApi.Controllers
     public class GuyController : ControllerBase
     {
         private readonly IGuyService _guyService;
-        public GuyController(IGuyService guyService)
+        private readonly IMapper _mapper;
+        public GuyController(IGuyService guyService, IMapper mapper)
         {
             _guyService = guyService;
+            _mapper = mapper;
         }
 
 
         // GET: api/<GuyController>
         [HttpGet]
-        public ActionResult Get()
+        public async Task<ActionResult> Get()
         {
-            return Ok(_guyService.GetAll());
+            var g = await _guyService.GetAll();
+            return Ok(g);
+
         }
 
         // GET api/<GuyController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task<ActionResult> GetById(int id)
         {
-            return Ok(_guyService.Get(id));   
+            var result = _guyService.GetById(id);
+
+            var GuysGet = _mapper.Map<DTOGuy>(result);
+            return Ok(GuysGet);
         }
-        //[HttpGet("{age}")]
-        //public IEnumerable<Guy> GetAge(int age)
-        //{
-        //    return contaxt.guys.Where(x => x.Age == age);
-        //}
+
 
         // POST api/<GuyController>
         [HttpPost]
-        public void Post([FromBody] Guy value)
+        public async Task<Guy> Post([FromBody] GuyPostModel value)
         {
-            _guyService.Post(value);
+            var guyToAdd = await _guyService.Post(_mapper.Map<Guy>(value));
+            return Ok(_mapper.Map<DTOGuy>(guyToAdd));
         }
 
         // PUT api/<GuyController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Guy value)
+        public async Task<ActionResult> Put(int id, [FromBody] GuyPostModel value)
+
         {
-            _guyService.put(id, value); 
+            var guyToAdd = await _guyService.Put(id, _mapper.Map<Guy>(value));
+            return Ok(_mapper.Map<DTOGuy>(guyToAdd));
         }
 
         // DELETE api/<GuyController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            _guyService.Delete(id);
+            var g = _guyService.GetById(id);
+            if (g == null)
+                return NotFound();
+            await _guyService.Delete(id);
+            return NoContent();
         }
     }
 }

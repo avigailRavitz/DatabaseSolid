@@ -13,12 +13,12 @@ namespace Solid.Data
         public DbSet<Girl> girls { get; set; }
         public DbSet<Guy> guys { get; set; }
         public DbSet<Matchmaker> matchmakers { get; set; }
-
-
+        public DbSet<Proposal> proposal { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=sample_avigail");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=sample1_db");
         }
 
+    
     }
 }

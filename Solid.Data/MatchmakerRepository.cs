@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Solid.Data
 {
@@ -16,31 +17,38 @@ namespace Solid.Data
         {
             _context = context;
         }
-        public void Delete(int id)
+
+        public async Task<Matchmaker> GetById(int id)
         {
-           _context.matchmakers.Remove(_context.matchmakers.ToList().Find(x => x.Id == id));
+            return await _context.matchmakers.Find(id);
         }
 
-        public Matchmaker Get(int id)
+        public async Task<List<Matchmaker>> GetAll(string? text = "")
         {
-            return _context.matchmakers.Where(x => x.Id == id).First();
+
+            return await _context.matchmakers.Include(x => x.Proposals).ThenInclude(x => x.Guy).ToList();
         }
 
-        public List<Matchmaker> GetAll(string? text = "")
-        {
-            //לוגיקה עסקית
-            return _context.matchmakers.Where(u => u.Name.Contains(text)).ToList();
-        }
-
-        public void Post(Matchmaker matchmaker)
+        public async Task<Matchmaker> Post(Matchmaker matchmaker)
         {
             _context.matchmakers.Add(matchmaker);
+            await _context.SaveChangesAsync();
+            return matchmaker;
         }
 
-        public void put(int id, Matchmaker matchmaker)
+        public async Task<Matchmaker> Put(int id, Matchmaker matchmaker)
         {
-            int index = _context.matchmakers.ToList().FindIndex(x => x.Id == id);
-            _context.matchmakers.ToList()[index] = matchmaker;
+            var index = await GetById(id);
+            index.Name = matchmaker.Name;
+            await _context.SaveChangesAsync();
+            return matchmaker;
         }
+        public async Task Delete(int id)
+        {
+            var matchmaker = await GetById(id);
+            _context.matchmakers.Remove(matchmaker);
+            await _context.SaveChangesAsync();
+        }
+
     }
 }

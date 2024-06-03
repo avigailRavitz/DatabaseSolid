@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "UIs2h3PmUqbfP1Slu7UHyHGeekSIVWQ6NMBTel8LZm1wuBrN4XZFBMyBp1XQG8fKJodR++nq/zJ0AK/o/r9V/Q==",
+  "dgSpecHash": "cD9Ms0TfubmJzr94+XkBSdZG2FWG7qoJHen7296MtNl4omSK1gIti3UcSKxQOJG7tZmEMDTeRgvjV/jiuBtgfg==",
   "success": true,
-  "projectFilePath": "Y:\\Groups\\Group_3\\רביץ  אביגיל\\new sold\\Solid\\Solid.Service\\Solid.Service.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\‏‏תיקיה חדשה (4)\\ShidoochimProject-Net.core-\\Solid.Service\\Solid.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

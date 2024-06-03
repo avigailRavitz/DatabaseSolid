@@ -8,6 +8,8 @@
         public double Heigh { get; set; }
         public string Yeshiva { get; set; }
         public string Sector { get; set; }
+        public bool IfGiveFlat { get; set; }
+        public List<Proposal> Proposals { get; set; }
 
     }
 }

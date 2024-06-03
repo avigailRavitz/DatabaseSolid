@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Solid.Core.Models;
 using Solid.Core.Repositories;
 
@@ -15,31 +17,44 @@ namespace Solid.Data
         {
             _context = context; 
         }
-        public void Delete(int id)
+        public async Task< Girl> GetById(int id)
         {
-            _context.girls.Remove(_context.girls.ToList().Find(x => x.Id == id));
+            return   _context.girls.Find(id);
         }
 
-        public Girl Get(int id)
+        public  async Task<List<Girl>> GetAll(string? text = "")
         {
-            return _context.girls.Where(x => x.Id == id).First();
+            return  await _context.girls.ToListAsync();
         }
 
-        public List<Girl> GetAll(string? text = "")
-        {
-            //לוגיקה עסקית
-            return _context.girls.Where(u => u.Name.Contains(text)).ToList();
-        }
-
-        public void Post(Girl girl)
+        public  async Task<Girl> Post(Girl girl)
         {
             _context.girls.Add(girl);
+            _context.SaveChanges();
+            return girl;
         }
 
-        public void put(int id, Girl girl)
+        public  async Task<Girl> put(int id, Girl girl)
         {
-            int index = _context.girls.ToList().FindIndex(x => x.Id == id);
-            _context.girls.ToList()[index] = girl;
+            var index = await GetById(id);
+           index.Name=girl.Name;
+            await _context.SaveChangesAsync();
+            return index;
+        }
+        public async Task Delete(int id)
+        {
+            var index = await GetById(id);
+            _context.girls.Remove(index);
+            await _context.SaveChangesAsync();
+
+        }
+
+       public async Task<Girl> post(Girl girl)
+        {
+             _context.girls.Add(girl);
+            await _context.SaveChangesAsync();
+            return girl;
+          
         }
     }
 }
